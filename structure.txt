@@ -1,0 +1,36 @@
+steps
+
+
+for adding student in to stroge.
+
+1. create HTML to get info of student.
+2. take that student from HTML and store it into localstroge.
+3.  pass data from HTML to  js(script).
+4.  pass data from js(script) localstroge.
+
+
+
+for displaying student.
+
+
+1.make structure of html fo data .
+1.1 make structure for marking attendence(present,absent)
+2.take student list from loacalstroge into js
+3. display studdent into my using js.
+
+    input add student name...
+
+1. amaan- [present] [absent]
+2. kalpesh- [present] [absent]
+
+FOR MARKING ATTENDENCE...
+
+1.present-function - db -present with date
+2.absent-function - db -absent with date
+
+
+❤
+
+
+
+
