@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script src="https://kit.fontawesome.com/60679dca1d.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +11,7 @@
             text-align: center;
         }
         #fullpage{
-            background-color: aqua;
+            /* background-color: aqua; */
         }
       #gettinginfo{
         width: 100%;
@@ -52,6 +53,20 @@
         color: white;
         
       }
+      #markingAttendance >div{
+          display: flex;
+      }
+      #markingAttendance> div>p:nth-child(1){
+        margin-right: 100px;
+        margin-left: 200px;
+      }
+      #markingAttendance> div>p:nth-child(2){
+        margin-right: 100px;
+      }
+
+
+      
+
 
     </style>
 </head>
@@ -62,7 +77,7 @@
         <input id="addingStudent" type="text"   placeholder="ADD Student here..."/> <br> <br>
         <button onclick="addStudent()"> ADD STUDENT</button>
     </div>
-    <h2>Mark Attendence</h2>
+    <h2>Mark Attendence <p id="dateHere"></p></h2>
     <div>
 
     </div>
