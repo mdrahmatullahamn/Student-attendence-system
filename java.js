@@ -11,7 +11,8 @@ function addStudent() {
     localStorage.setItem("StudentsList", JSON.stringify(StudentsList));
     document.getElementById("addingStudent").value = "";
     markingAttendance();
-    displayStudentsList();
+    // displayStudentsList();
+    displayingStudentsAttendance()
 
 
 }
@@ -70,28 +71,50 @@ function absent(index) {
     var dateAndTime = new Date();
     var date = dateAndTime.toJSON().slice(0, 10);
     // var studentListFromLS = 
-}
 
 
-function displayStudentsList() {
+// function displayStudentsList() {
     //testing data from stroge
-    var studentsList = JSON.parse(localStorage.getItem('StudentsList'));
-    console.log(studentsList, "StudentList")
+    // var studentsList = JSON.parse(localStorage.getItem('StudentsList'));
+    // console.log(studentsList, "StudentList")
 
     //testing tags from Html
-    var divFromHTML = document.getElementById("displayStudentsList");
-    console.log(divFromHTML, "divFromHTML");
+    // var divFromHTML = document.getElementById("displayStudentsList");
+    // console.log(divFromHTML, "divFromHTML");
 
     //looping over userlist to create prefect structure
-    var student = [];
+    // var student = [];
 
-    for (var i = 0; i < studentsList.length; i++) {
-        student += `<div><p>${studentsList[i].nameOfStudent}</p> </div>`
-    }
-    console.log(student, "student");
+    // for (var i = 0; i < studentsList.length; i++) {
+    //     student += `<div><p>${studentsList[i].nameOfStudent}</p> </div>`
+    // }
+    // console.log(student, "student");
     //adding localstroge data into Html with prefect structure
-    divFromHTML.innerHTML = student;
+    // divFromHTML.innerHTML = student;
 }
-displayStudentsList()
+// displayStudentsList()
+function displayingStudentsNameList(){
+    var idFromHtml=document.getElementById("studentname")
+    var dataFromLS = JSON.parse(localStorage.getItem("studentsList"));
+    var namesArray = [];
+    for (var i = 0 ;i <dataFromLS.length;i++){
+        namesArray += `<div>${dataFromLS}. </div>`
+    }
+}
+
+function displayingStudentsAttendance(){
+    var IdFromHtml = document.getElementById("studentsAttendance")
+    var dataFromLS = JSON.parse(localStorage.getItem("studentsList"));
+
+    var dates = [];
+    for( var k= 0; k< dataFromLS[k].attendance.length;i++){
+        dates.push((object.keys(dataFromLS[k].attendance[1])[0]));
+        if(!dates.includes ((object.keys(dataFromLS[k].attendance[1])[0]))){
+            dates.push ((object.keys(dataFromLS[k].attendance[1])[0]))
+        }
+    }
+}
+console.log(dates ,'dates here')
+displayingStudentsAttendance()
 
 

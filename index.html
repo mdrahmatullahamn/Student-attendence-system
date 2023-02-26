@@ -1,81 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <script src="https://kit.fontawesome.com/60679dca1d.js" crossorigin="anonymous"></script>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student-addendence-system</title>
-    <style>
-        *{
-            text-align: center;
-        }
-        #fullpage{
-            /* background-color: aqua; */
-        }
-      #gettinginfo{
-        width: 100%;
-        margin: auto;
-        border: 1px solid red;
-        height: 100px;
-        text-align: center;
-        margin-bottom: 50px;
-        background-color: brown;
-      }
-      #displayStudentsList{
-        width: 50%;
-        margin: auto;
-        /* border: 1px solid blue; */
-        height: 260px;
-        text-align: center;
-        background-color: blue;
-        color: white;
-      }
-      #markingAttendance{
-        width: 50%;
-        margin: auto;
-        /* border: 1px solid blue; */
-        height: 260px;
-        text-align: center;
-        background-color: blue;
-        color: white;
-      }
-      h2{
-        background-color: rgb(240, 189, 122);
-      }
-      #gettinginfo button{
-        background-color: rgb(241, 70, 8);
-        color: white;
-      }
-      #gettinginfo label{
-        font-size: 18px;
-        font-weight: 800;
-        color: white;
-        
-      }
-      #markingAttendance >div{
-          display: flex;
-      }
-      #markingAttendance> div>p:nth-child(1){
-        margin-right: 100px;
-        margin-left: 200px;
-      }
-      #markingAttendance> div>p:nth-child(2){
-        margin-right: 100px;
-      }
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student-addendence-system</title>
+  <style>
+    * {
+      text-align: center;
+    }
 
+    #fullpage {
+      /* background-color: aqua; */
+    }
 
-      
+    #gettinginfo {
+      width: 100%;
+      margin: auto;
+      border: 1px solid red;
+      height: 100px;
+      text-align: center;
+      margin-bottom: 50px;
+      background-color: brown;
+    }
 
+    #displayStudentsList {
+      width: 50%;
+      margin: auto;
+      /* border: 1px solid blue; */
+      height: 260px;
+      text-align: center;
+      background-color: blue;
+      color: white;
+    }
 
-    </style>
+    #markingAttendance {
+      width: 50%;
+      margin: auto;
+      /* border: 1px solid blue; */
+      height: 260px;
+      text-align: center;
+      background-color: blue;
+      color: white;
+    }
+
+    h2 {
+      background-color: rgb(240, 189, 122);
+    }
+
+    #gettinginfo button {
+      background-color: rgb(241, 70, 8);
+      color: white;
+    }
+
+    #gettinginfo label {
+      font-size: 18px;
+      font-weight: 800;
+      color: white;
+
+    }
+
+    #markingAttendance>div {
+      display: flex;
+    }
+
+    #markingAttendance>div>p:nth-child(1) {
+      margin-right: 100px;
+      margin-left: 200px;
+    }
+
+    #markingAttendance>div>p:nth-child(2) {
+      margin-right: 100px;
+    }
+    #studentname{
+      height: 30px;
+      width: 100%;
+      border: 2px solid red;
+    }
+    
+  </style>
 </head>
+
 <body>
-    <div id="fullpage">
+  <div id="fullpage">
     <div id="gettinginfo">
-        <label for="">Add Student</label> <br> <br>
-        <input id="addingStudent" type="text"   placeholder="ADD Student here..."/> <br> <br>
-        <button onclick="addStudent()"> ADD STUDENT</button>
+      <label for="">Add Student</label> <br> <br>
+      <input id="addingStudent" type="text" placeholder="ADD Student here..." /> <br> <br>
+      <button onclick="addStudent()"> ADD STUDENT</button>
     </div>
     <h2>Mark Attendence <p id="dateHere"></p></h2>
     <div>
@@ -86,9 +99,22 @@
     </div>
     <h2>Attendence Sheet</h2>
     <div id="displayStudentsList">
+      <div id="studentname">
+      <!-- <div>a</div>
+      <div>b</div>
+      <div>c</div> -->
     </div>
-    </div>
+    <div id="attendance">
+         <div id="dates">date</div>
+         <div id="studentsAttendance">
 
-    <script src="./java.js"></script>
+
+         </div>
+    </div>
+    </div>
+  </div>
+
+  <script src="./java.js"></script>
 </body>
+
 </html>
