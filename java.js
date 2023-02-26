@@ -103,18 +103,57 @@ function displayingStudentsNameList(){
 }
 
 function displayingStudentsAttendance(){
-    var IdFromHtml = document.getElementById("studentsAttendance")
+    // var IdFromHtml = document.getElementById("studentsAttendance")
+    var for25 = document.getElementById("first")
     var dataFromLS = JSON.parse(localStorage.getItem("studentsList"));
 
     var dates = [];
-    for( var k= 0; k< dataFromLS[k].attendance.length;i++){
+    for (var k =0; k <dataFromLS.length;k++){
+    for ( var k= 0; k< dataFromLS[k].attendance.length;i++){
         dates.push((object.keys(dataFromLS[k].attendance[1])[0]));
         if(!dates.includes ((object.keys(dataFromLS[k].attendance[1])[0]))){
             dates.push ((object.keys(dataFromLS[k].attendance[1])[0]))
-        }
+             }
+            }
     }
 }
 console.log(dates ,'dates here')
-displayingStudentsAttendance()
+displayingStudentsAttendance();
 
+function displayingStudentsAttendance() {
+    var for25 = document.getElementById("first");
+    // console.log(idFromHTML, 'idFromHTML')
+    var dataFromLs = JSON.parse(localStorage.getItem("StudentsList"));
+    var dates = [];
+    for (var k = 0; k < dataFromLs.length; k++) {
+        for (var l = 0; l < dataFromLs[k].attendance.length; l++) {
+            // console.log(dataFromLs[k].attendance[l])
+            // console.log((Object.keys(dataFromLs[k].attendance[l])[0]))
+            if (!dates.includes((Object.keys(dataFromLs[k].attendance[l])[0]))) {
+                dates.push((Object.keys(dataFromLs[k].attendance[l])[0]))
+            }
+
+        }
+    }
+    var finalArrayWithAtt = [];
+    var settingDates = ['2023-02-25']
+    for (var i = 0; i < dataFromLs.length; i++) {
+        // console.log(dataFromLs[i].attendance,"heree");
+        if (dataFromLs[i].attendance.length) {
+            for (var j = 0; j < dataFromLs[i].attendance.length; j++) {
+                for (var k = 0; k < settingDates.length; k++) {
+                    if (dataFromLs[i].attendance[j][settingDates[k]]) {
+                        // console.log((dataFromLs[i].attendance[j][settingDates[k]]), dataFromLs[i].nameOfStudent, dd[k])
+                        finalArrayWithAtt += `<div>${dataFromLs[i].attendance[j][settingDates[k]]}</div>`;
+                    }
+                }
+            }
+        } else {
+            finalArrayWithAtt += `<div>No data</div>`;
+        }
+    }
+    // console.log(check, 'check')
+    for25.innerHTML = finalArrayWithAtt;
+}
+displayingStudentsAttendance()
 
